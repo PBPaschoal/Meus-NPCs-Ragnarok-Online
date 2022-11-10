@@ -1,0 +1,230 @@
+//--------- Meu NPC GM Suporte para GM iniciante -------
+//--------- Comandos de GM -----------------------------
+//--------- Criado em 01/06/2021 por PBPaschoal --------
+
+gmniflheim,198,193,6	script	[GM Suporte]	864,{
+
+mes "^0000FFElisabeth^000000";
+mes "Olá "+strcharinfo(0)+" bem vindo(a) ao Suporte para GM iniciante.";
+mes "Escolha as opções abaixo:";
+Next;
+switch (select("Classes:Criação de Item:Pontos de Atributos:Habilidades:Nível Base:Warp:Refinamento:Montaria:Monstros:Cancelar")) {
+	case 1:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691EClasses^000000";
+		mes "Para se ^FF0000transformar^000000 em Aprendiz digite: @job 0";
+		mes "Escolha uma classe e suas evoluções:";
+		Next;
+		switch (select("Espadachim e Evoluções:Arqueiro e Evoluções:Mercador e Evoluções:Gatuno e Evoluções:Noviço e Evoluções:Mago e Evoluções:Outras:Cancelar")) {
+		case 1:
+			mes "^0000FFElisabeth^000000";
+			mes "^FF0000[LEIA]:^000000";
+			mes "Para se ^FF0000transformar^000000 em ??: digite @job ????";
+			mes "^4B0082Espadachim = @job 1";
+			mes " ";
+			mes "^4B0082Cavaleiro(a)^000000 = @job 7";
+			mes "^4B0082Lorde(Lady)^000000 = @job 4008";
+			mes "^4B0082Rune^000000 = @job 4060";
+			mes " ";
+			mes "^4B0082Templário(a)^000000 = @job 14";
+			mes "^4B0082Paladino(a)^000000 = @job 4015";
+			mes "^4B0082Royal Guard^000000 = @job 4073";
+			close2;
+			break;
+		case 2:
+			mes "^0000FFElisabeth^000000";
+			mes "^FF0000[LEIA]:^000000";
+			mes "^0000FFElisabeth^000000";
+			mes "Para se ^FF0000transformar^000000 em ??: digite @job ????";
+			mes "^4B0082Arqueiro(a)^000000 = @job 3";
+			mes " ";
+			mes "^4B0082Caçador(a)^000000 = @job 11";
+			mes "^4B0082Atirador(a) de Elite^000000 = @job 4012";
+			mes "^4B0082Ranger^000000 = @job 4056";
+			mes " ";
+			mes "^4B0082Bardo(Odalisca)^000000 = @job 19";
+			mes "^4B0082Menestrel(Ciagana)^000000 = @job 4020";
+			mes " ";
+			mes "^4B0082Minstrel^000000 = @job 4075";
+			close3;
+			break;
+		case 3:
+			mes "^0000FFElisabeth^000000";
+			mes "^FF0000[LEIA]:^000000";
+			mes "^0000FFElisabeth^000000";
+			mes "Para se ^FF0000transformar^000000 em ??: digite @job ????";
+			mes "^4B0082Mercador(a)^000000 = @job 5";
+			mes " ";
+			mes "^4B0082Alquimista^000000 = @job 18";
+			mes "^4B0082Criador(a)^000000 = @job 4019";
+			mes "^4B0082Genetic^000000 = @job 4078";
+			mes " ";
+			mes "^4B0082Ferreiro(a)^000000 = @job 10";
+			mes "^4B0082Mestre(a)^000000 Ferreiro = @job 4011";
+			mes "^4B0082Mechanic^000000 = @job 4064";
+			break;
+		case 4:
+			mes "^0000FFElisabeth^000000";
+			mes "^FF0000[LEIA]:^000000";
+			mes "Para se ^FF0000transformar^000000 em ??: digite @job ????";
+			mes "^4B0082Gatuno(a)^000000 = @job 6";
+			mes " ";
+			mes "^4B0082Mercenário(a)^000000 = @job 12";
+			mes "^4B0082Algoz^000000 = @job 4013";
+			mes "^4B0082Guillotine Cros^0000 = @job 4065";
+			mes " ";
+			mes "^4B0082Arruaceiro(a)^000000 = @job 17";
+			mes "^4B0082Stalker^000000 = @job 4018";
+			mes "^4B0082Shadow Chaser^000000 = @job 4079";
+			break;
+		case 5:
+			mes "^0000FFElisabeth^000000";
+			mes "^FF0000[LEIA]:^000000";
+			mes "Para se ^FF0000transformar^000000 em ??: digite @job ????";
+			mes "^4B0082Noviço(a)^000000 = @job 4";
+			mes " ";
+			mes "^4B0082Monge(ja)^000000 = @job 15";
+			mes "^4B0082Mestre(a)^000000 = @job 4016";
+			mes "^4B0082Shura^000000 = @job 4077";
+			mes " ";
+			mes "^4B0082Sacerdote^000000 = @job 8";
+			mes "^4B0082Sumo(a) Sacerdote^000000 = @job 4009";
+			mes "^4B0082Arch Bishop^000000 = @job 4063";
+			end;
+		case 6:
+			mes "^0000FFElisabeth^000000";
+			mes "^FF0000[LEIA]:^000000";
+			mes "Para se ^FF0000transformar^000000 em ??: digite @job ????";
+			mes "^4B0082Mago(a)^000000 = @job 2";
+			mes " ";
+			mes "^4B0082Bruxo(a)^000000 = @job 9";
+			mes "^4B0082Arquimago(a)^000000 = @job 4010";
+			mes "^4B0082Warlock^000000 = @job 4061";
+			mes " ";
+			mes "^4B0082Sábio(a)^000000 = @job 16";
+			mes "^4B0082Professor(a)^000000 = @job 4017";
+			mes "^4B0082Sorcerer^000000 = @job 4074";
+			end;
+		case 7:
+			mes "^0000FFElisabeth^000000";
+			mes "^FF0000[LEIA]:^000000";
+			mes "Para se ^FF0000transformar^000000 em ??: digite @job ????";
+			mes "^FF69B4Super Aprendiz^000000 = @job 23";
+			mes "^FF69B4Justiceiro(a)^000000 = @job 24";
+			mes "^FF69B4Rebellion^000000 = @job 4215";
+			mes "^FF69B4Ninja^000000 = @job 25";
+			mes "^FF69B4Taekwon^000000 = @job 4046";
+			mes "^FF69B4Mestre(a) Taekwon^000000 = @job 4047";
+			mes "^FF69B4Soul Linker^000000 = @job 4049";
+			mes "^FF69B4Oboro^000000 = @job 4212";
+			mes "^FF69B4Summoner^000000 = @job 4218";
+			mes "Para mais opções, digite ^FF0000@job^000000 e de enter.";
+			break;
+			end;
+		}
+		close;
+		
+	case 2:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691EItens^000000";
+		mes "Para criar qualquer item (Item, Equipes ou etc).";
+		mes "Digite = ^0000FF@item + ID^000000 + quantidade (ou só o @item + ID caso queira apenas 1 quantidade";
+		mes "não precisa especificar).";
+		mes "Exemplo: ^0000FF@item^000000 ^FF0000607^000000.";
+		mes "Cria uma unidade do Fruto de Yggdrasil.";
+		mes "E exemplo: @item 607 100.";
+		mes "Cria 100 unidades do Fruto de Yggdrasil.";
+		mes "Para saber o ID do item que você deseja criar";
+		mes "basta pesquisar no Google. Quer um exemplo? Segue:";
+		mes "Vai no google e escreva ^FF69B4'database asa de mosca'^000000 e";
+		mes "vai ter o ID do item logo abaixo do nome.";
+		mes "Depois é só digitar aqui no jogo ^FF0000@item + ID.^000000";
+		end;
+	
+	case 3:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691EAtributos^000000";
+		mes "Pontos de Atributos para ^FF0000não^000000 GMs:";
+		mes "Para preencher mais rapido, basta digitar";
+		mes "/atributo+ quantidade EXEMPLO:";
+		mes "/dex+ 100";
+		mes "/str+ 50; etc...";
+		mes "^0000FFPara GM^000000 basta digitar:";
+		mes "^FF1493@str^000000 + ^A020F0quantidade^000000";
+		mes "Exemplo:";
+		mes "@vit 6500";
+		end;
+		
+	case 4:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691EHabilidades^000000";
+		mes "Para subir o nível de job (classe; skill)";
+		mes "basta digitar: @joblvup ^32CD32quantidade^000000";
+		mes "Exemplo:";
+		mes "^0000FF@joblvup 70^000000";
+		mes "E para colocar todas as habilidades no maximo";
+		mes "^FF0000OBS^000000: Mesmo os pontos de jobs estando ^FF7F50ZERADOS.^000000";
+		mes "basta digitar: ^FF1493@allskill^000000";
+		mes "e PRONTO!";
+		end;
+	
+	case 5:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691ENível Base^000000";
+		mes "Para subir de nível basta digitar:";
+		mes "^0000FF@lvup^000000 ^32CD32quantidade^000000";
+		mes "Exemplo:";
+		mes "^FF1493@lvup 99^000000";
+		end;
+	
+	case 6:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691EWarp^000000";
+		mes "Para se teletransportar para um warp";
+		mes "digite @warp ^32CD32local^000000";
+		mes "Exemplo:";
+		mes "^7B68EE@warp lhz_dun03^000000";
+		mes "Caso queira um local especifico, digite o mesmo comando com coordenadas";
+		mes "Exemplo:";
+		mes "^0000FF@warp pay_dun00,70,23^000000";
+		mes "Para saber a coordenada você pode digitar /where no local onde já foi e quer voltar";
+		mes "ou pesquisar no google.";
+		end;
+		
+	case 7:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691ERefinamento^000000";
+		mes "Para refinar os equipes basta digitar @refin ^32CD32código da posição^000000 e ^32CD32quantidade a refinar.^000000";
+		mes "Quantidade maxima são ^FF000020^000000.";
+		mes "Exemplo: ";
+		mes "^0000FF@refine 5 7^000000";
+		mes "Significa que o equipe da posição 5 vai ser finado +7";
+		mes "Para refinar todos os equipes de uma vez, digite: ";
+		mes "^0000FF@refine^000000 ^FF00000^000000 ^FFD70020^000000";
+		mes "Todos os equipes refinados + 20";
+		mes "Para saber as posições, digite: @refine e de enter.";
+		end;
+	
+	case 8:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691EMontaria^000000";
+		mes "Digite @mount";
+		end;
+		
+	case 9:
+		mes "^0000FFElisabeth^000000";
+		mes "^D2691EMonstros^000000";
+		mes "Para criar monstros digite:";
+		mes "@monster + ID ou nome";
+		mes "Exemplo:";
+		mes "@monster Ifrit";
+		mes "@monster 1832";
+		mes "Também pode colocar a quantidade que deseja criar.";
+		mes "Exemplo:";
+		mes "^FFA500@monster^000000 ^9400D31832 20^000000 ou ^FFA500@monster^000000 ^9400D3Ifrit 20^000000";
+		mes "Você pode derrotar todos os monstros do mapa de uma só vez.";
+		mes "Digite: ^0000FF@killmonster^000000";
+		end;
+	}
+	close;
+}
