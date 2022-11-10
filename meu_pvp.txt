@@ -1,0 +1,101 @@
+//  ______________________________________________________________________
+// /                                                                      \
+// |            _           _   _   _                                      |
+// |           | |__  _ __ / \ | |_| |__   ___ _ __   __ _                 |
+// |           | '_ \| '__/ _ \| __| '_ \ / _ \ '_ \ / _` |                |
+// |           | |_) | | / ___ \ |_| | | |  __/ | | | (_| |                |
+// |           |_.__/|_|/_/   \_\__|_| |_|\___|_| |_|\__,_|                |
+// |                                                                       |
+// |                         brAthena Script                               |
+// |-----------------------------------------------------------------------|
+// | Nome do Script: Meu PvP Simples PB                                |
+// |-----------------------------------------------------------------------|
+// | Criado por: PB                                          |
+// |-----------------------------------------------------------------------|
+// | 
+// \_______________________________________________________________________/
+//============================================================
+
+prontera,165,190,2	script	Arena PvP	801,{
+
+mes "[PvP]";
+mes "Deseja entrar na Arena PvP?";
+next;
+menu "Sim",sim,"Não",cancelar;
+
+sim:
+mes "[PvP]";
+mes "Boa sorte!";
+next;
+warp "guild_vs2",0,0;
+close;
+
+cancelar:
+mes "[PvP]";
+mes "Tudo bem, ^5566FF"+strcharinfo(0)+"^000000";
+mes "Fale comigo quando quiser entrar.";
+close;
+}
+
+//------------------------------- Saida:
+/*
+guild_vs2,65,64,2	script	Saida	837,{
+
+mes "[Saida]";
+mes "Você quer sair do PvP?";
+next;
+menu "Sim",sim,"Não",cancelar;
+
+sim:
+mes "[Saida]";
+mes "Até Logo!";
+next;
+warp "prontera",165,162;
+close;
+
+cancelar:
+mes "[Saida]";
+mes "Tudo bem, ^5566FF"+strcharinfo(0)+"^000000, fale comigo quando quiser sair.";
+close;
+}*/
+
+
+
+//========= Cidades =========
+morocc,148,87,4	duplicate(Arena PvP)	Arena PvP#Morroc	801,
+geffen,115,72,4	duplicate(Arena PvP)	Arena PvP#Geffen	801,
+payon,166,112,4	duplicate(Arena PvP)	Arena PvP#Payon	801,
+alberta,50,251,4	duplicate(Arena PvP)	Arena PvP#Alberta	801,
+izlude,136,126,4	duplicate(Arena PvP)	Arena PvP#Izlude	801,
+aldebaran,133,117,4	duplicate(Arena PvP)	Arena PvP#Aldebaran	801,
+xmas,155,127,4	duplicate(Arena PvP)	Arena PvP#Lutie	801,
+comodo,219,135,4	duplicate(Arena PvP)	Arena PvP#Comodo	801,
+yuno,149,187,4	duplicate(Arena PvP)	Arena PvP#Juno	801,
+amatsu,191,105,4	duplicate(Arena PvP)	Arena PvP#Amatsu	801,
+gonryun,166,112,4	duplicate(Arena PvP)	Arena PvP#Kulun	801,
+umbala,95,148,4	duplicate(Arena PvP)	Arena PvP#Umbala	801,
+niflheim,203,193,4	duplicate(Arena PvP)	Arena PvP#Niflheim	801,
+louyang,227,102,4	duplicate(Arena PvP)	Arena PvP#Louyang	801,
+sec_in01,99,151,3	duplicate(Arena PvP)	Arena PvP#SalaVIP	801,
+jawaii,254,138,4	duplicate(Arena PvP)	Arena PvP#Jawaii	801,
+ayothaya,224,169,4	duplicate(Arena PvP)	Arena PvP#Ayothaya	801,
+einbroch,52,202,4	duplicate(Arena PvP)	Arena PvP#Einbroch	801,
+lighthalzen,163,78,4	duplicate(Arena PvP)	Arena PvP#Lighthalzen	801,
+einbech,195,130,4	duplicate(Arena PvP)	Arena PvP#Einbech	801,
+hugel,105,153,4	duplicate(Arena PvP)	Arena PvP#Hugel	801,
+rachel,123,105,4	duplicate(Arena PvP)	Arena PvP#Rachel	801,
+veins,199,115,4	duplicate(Arena PvP)	Arena PvP#Veins	801,
+moscovia,215,183,4	duplicate(Arena PvP)	Arena PvP#Moscovia	801,
+mid_camp,190,241,4	duplicate(Arena PvP)	Arena PvP#Mid	801,
+manuk,292,146,4	duplicate(Arena PvP)	Arena PvP#Manuk	801,
+brasilis,185,219,4	duplicate(Arena PvP)	Arena PvP#Brasilis	801,
+dicastes01,202,175,4	duplicate(Arena PvP)	Arena PvP#ElDicastes	801,
+mora,38,141,4	duplicate(Arena PvP)	Arena PvP#Mora	801,
+dewata,185,177,4	duplicate(Arena PvP)	Arena PvP#Dewata	801,
+malangdo,145,135,4	duplicate(Arena PvP)	Arena PvP#Malangdo	801,
+malaya,227,226,4	duplicate(Arena PvP)	Arena PvP#Malaya	801,
+eclage,109,64,4	duplicate(Arena PvP)	Arena PvP#Eclage	801,
+lasagna,198,178,4	duplicate(Arena PvP)	Arena PvP#Lasagna	801,
+splendide,209,138,4	duplicate(Arena PvP)	Arena PvP#Splendide	801,
+moc_para01,38,164,4	duplicate(Arena PvP)	Arena PvP#Eden	801,
+gmniflheim,192,194,4	duplicate(Arena PvP)	Arena PvP#CiadedaStaff	864
