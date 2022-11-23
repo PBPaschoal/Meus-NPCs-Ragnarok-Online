@@ -1,0 +1,146 @@
+sec_in01,86,180,4	script	Guardião VIP	995,{
+	mes "[^FF8000Guardião VIP^000000]";
+	mes "Olá! Seja bem-vindo a sala VIP!";
+	next;
+	mes "[^FF8000Guardião VIP^000000]";
+	mes "Como você pode ver, temos muitos beneficios.";
+	mes "...";
+	mes "Que tal aprender mais sobre os comandos VIP?";
+	menu "- Não quero, obrigado!",not, "- Sim, me ensine!",-;
+	next;
+	mes "[^FF8000Guardião VIP^000000]";
+	mes "Certo!";
+	mes "Escolha qual você deseja aprender:";
+	next;
+	switch(select("^008000@go^000000","^008000@storage^000000","^008000@autotrade^000000","^008000@showdelay^000000","^008000@monsterinfo^000000","^008000@iteminfo^000000","^008000@whodrops^000000","^008000@showexp^000000","^008000@changegm^000000","^008000@changeleader^000000","^008000@whereis^000000","^008000@alootid^000000")){
+		case 1:
+			mes "[Guardião VIP]";
+			mes "^FF8000@GO^000000 é usado para se teletransportar para uma Cidade especifica";
+			next;
+			mes "[Guardião VIP]";
+			mes "Você precisa usar @go e o número da cidade";
+			mes "Por exemplo, Prontera é @go 0";
+			next;
+			mes "[Guardião VIP]";
+			mes "Você pode consultar as cidades e seus números digitando apenas @go da apertar a tecla enter.";
+			mes "@go sem nenhum número.";
+			mes "E assim será apresentado para você a lista com os nomes e números de cada Cidade.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 2:
+			mes "[Guardião VIP]";
+			mes "^FF8000@STORAGE^000000 Permite abrir o armazém Kafra.";
+			mes "Isso mesmo! Bem simples e objetivo!";
+			next;
+			mes "[Guardião VIP]";
+			mes "Você pode acessar o seu armazém praticamente em qualquer lugar!";
+			next;
+			mes "Isso é muito vantajoso, ajuda bastante caso precise pegar um equipe, item ou etc.";
+			mes "E até mesmo guardar, para não carregar tanto peso!";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 3:
+			mes "[Guardião VIP]";
+			mes "^FF8000@AUTOTRADE^000000 é para você que sempre sonhou em ter uma loja!";
+			mes "É o comando mais importante para os comerciantes do Nordic BR";
+			next;
+			mes "[Guardião VIP]";
+			mes "Você pode montar a sua loja e usar o comando @autotrade para que a mesma possa ficar online mesmo que você não esteja utilizando.";
+			next;
+			mes "[Guardião VIP]";
+			mes "Vou explicar de outra maneira.";
+			mes "Você vai poder deixar a sua loja ativa mesmo não estando com o jogo aberto!";
+			mes "Isso é muito bom, pois ajuda a manter o seu negocio 24hrs online até que o último item seja vendido e assim desconectando automaticamente a sua loja.";
+			next;
+			mes "[Guardião VIP]";
+			mes "É um dos melhores metodos de fazer dinheiro, não acha?";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 4:
+			mes "[Guardião VIP]";
+			mes "^FF8000@SHOWDELAY^000000 Exibe informações sobre o delay";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 5:
+			mes "[Guardião VIP]";
+			mes "^FF8000@MONSTERINFO^000000 Exibe informações, drops sobre um determinado monstro. @monsterinfo Monstro/ID.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 6:
+			mes "[Guardião VIP]";
+			mes "^FF8000@ITEMINFO^000000 Exibe informações, drops sobre um determinado item. @iteminfo Item/ID.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 7:
+			mes "[Guardião VIP]";
+			mes "^FF8000@WHODROPS^000000 Busca qual monstro dropa um determinado item. @whodrops Item/ID.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 8:
+			mes "[Guardião VIP]";
+			mes "^FF8000@SHOWEXP^000000 Exibe a experiência recebida.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 9:
+			mes "[Guardião VIP]";
+			mes "^FF8000@CHANGEGM^000000 Permite passar a liderança do clã a outro membro. @changegm Membro.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 10:
+			mes "[Guardião VIP]";
+			mes "^FF8000@CHANGELEADER^000000 Permite passar a liderança do grupo a outro membro. @changeleader Membro.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 11:
+			mes "[Guardião VIP]";
+			mes "^FF8000@WHEREIS^000000 Exibe todos os mapas em que o monstro possui respawn. @whereis Monstro/ID.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+		case 12:
+			mes "^FF8000@ALOOTID^000000 Permite escolher até 15 itens diferentes para auto-capturar ao derrotar algum monstro.";
+			next;
+			mes "[Guardião VIP]";
+			mes "^0000ffAinda tem duvidas? Acesse o Discord ou fórum e consulte o nosso suporte!^000000";
+			mes "NORDIC BR ^0000ff~^000000";
+			end;
+	}
+	close;
+	not:
+	next;
+	mes "[^FF8000Guardião VIP^000000]";
+	mes "Está bem, volte se precisar.";
+	close;
+}
