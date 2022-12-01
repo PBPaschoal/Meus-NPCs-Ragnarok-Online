@@ -1,0 +1,600 @@
+//=================== Minha Versão PB ([Adm]Smeagol) ===================
+//============================================================
+prontera,157,193,4	script	Teletransportador::warpra	811,{
+	mes "[^FF8000Teleportadora^000000]";
+	mes "Olá ^0000CD"+strcharinfo(0)+"^000000!";
+	mes "Seja bem-vindo ao Serviço de Teletransporte.";
+	mes "Selecione a opção desejada:";
+	next;
+	switch(select("Normal:^0000ffVIP^000000")){
+		case 1:
+		if(select("Desejo ir à uma Cidade.:Desejo ir à outros lugares") == 1){
+			mes "[^FF8000Teleportador Normal^000000]";
+			mes "Por favor selecione seu destino.";
+			next;
+			switch(select(	"Prontera","Alberta","Al De Baran","Amatsu","Ayothaya","Comodo","Einbroch",
+				"Einbech","Geffen","Juno","Kunlun","Izlude","Louyang","Lutie","Morroc",
+				"Niflheim","Payon","Umbala","Lighthalzen","Hugel","Rachel","Veins",
+				"Ilha Esquecida(Aldeia)","Moscóvia")){
+
+				case 1: warp "prontera",156,196; end;
+				case 2: warp "alberta",27,236; end;
+				case 3: warp "aldebaran",145,120; end;
+				case 4: warp "amatsu",197,86; end;
+				case 5: warp "ayothaya",149,118; end;
+				case 6: warp "comodo",188,161; end;
+				case 7: warp "einbroch",64,200; end;
+				case 8: warp "einbech",179,128; end;
+				case 9: warp "geffen",119,66; end;
+				case 10: warp "yuno",160,168; end;
+				case 11: warp "gonryun",150,130; end;
+				case 12: warp "izlude",128,111; end;
+				case 13: warp "louyang",210,108; end;
+				case 14: warp "xmas",148,131; end;
+				case 15: warp "morocc",159,93; end;
+				case 16: warp "niflheim",35,161; end;
+				case 17: warp "payon",152,75; end;
+				case 18: warp "umbala",130,130; end;
+				case 19: warp "lighthalzen",158,92; end;
+				case 20: warp "hugel",96,145; end;
+				case 21: warp "rachel",130,110; end;
+				case 22: warp "veins",216,123; end;
+				case 23: warp "nameless_i",175,256; end;
+				case 24: warp "moscovia",223,184; end;
+			}
+		}else{
+			mes "[^FF8000Teleportadora Normal^000000]";
+			mes "Por favor selecione seu destino.";
+			next;
+			switch(select(	"Calabouço de Einbech","Calabouço de Magma","Caverna de Comodo",
+				"Caverna de Payon","Esfinge","Esgoto de Prontera","Fábrica de Brinquedos","Formigueiro Infernal",
+				"Glast Heim","Ilha Byalan","Ilha das Tartarugas","Labirinto de Tatames",
+				"Mina de Carvão","Navio Fantasma","Pirâmide","Praia das Focas",
+				"Poringlândia","Vila dos Orcs","Bio Laboratório de Lighthalzen",
+				"O Lago do Abismo","Calabouço de Kunlun","Torre de Thanatos",
+				"Desfiladeiro de El Mes","Caverna de Gelo","Vulcão de Thor",
+				"Campos de Ayothaya","Monastério","Floresta Encantada")){
+
+				case 1: warp "einbech",135,249; end;
+				case 2: warp "yuno_fild03",36,140; end;
+				case 3: 
+					mes "[^FF8000Teleportadora Normal^000000]";
+					mes "Caverna de Comodo? Poderia ser mais específico?";
+					next;
+					switch(select("Karu, a caverna do Oeste:Ruande, a caverna do Norte:Mao, a caverna do Leste")){
+						case 1: warp "beach_dun",266,67; end;
+						case 2:	warp "beach_dun2",154,25; end;
+						case 3:	warp "beach_dun3",23,260; end;
+					}
+					close;
+				case 4: warp "pay_arche",43,132; end;
+				case 5: warp "moc_fild19",107,100; end;
+				case 6: warp "prt_sewb1",126,248; end;
+				case 7: warp "xmas",144,310; end;
+				case 8: warp "cmd_fild08",330,355; end;
+				case 9: warp "glast_01",368,303; end;
+				case 10: warp "izlu2dun",106,88; end;
+				case 11: warp "tur_dun01",149,238; end;
+				case 12: warp "ama_dun01",229,12; end;
+				case 13: warp "mjolnir_02",81,359; end;
+				case 14: warp "alb2trea",75,98; end;
+				case 15: warp "moc_ruins",62,162; end;
+				case 16: warp "cmd_fild02",222,372; end;
+				case 17: warp "pay_fild04",20,165; end;
+				case 18: warp "gef_fild10",70,332; end;
+				case 19: warp "lhz_dun02",220,6; end;
+				case 20: warp "hu_fild05",189,207; end;
+				case 21: warp "gonryun",160,195; end;
+				case 22: warp "tha_scene01",131,223; end;
+				case 23: warp "yuno_fild07",218,176; end;
+				case 24: warp "ra_fild01",233,326; end;
+				case 25: warp "ve_fild03",168,235; end;
+				case 26: warp "ayo_fild02",280,149; end;
+				case 27: warp "nameless_n",160,183; end;
+				case 28: warp "mosk_fild02",190,252; end;
+			}
+		}
+		case 2:
+		if (vip_status(1) || getgmlevel() > 98) {
+			mes "[^FF8000Teleportadora VIP^000000]";
+			mes "Selecione a opção desejada:";
+			switch(select("A Grande Ferida","Área de Coral Estrelado","Calabouço da Mina","Calabouço de Geffen",
+			"Calabouço de Louyang","Calabouços de Comodo","Calabouços de Dewata","Calabouços de Kunlun",
+			"Calabouços de Umbala","Caverna das Cataratas","Caverna de Gelo","Caverna de Magma","Caverna de Payon",
+			"Caverna dos Orcs","Dragon's Nest","Esfinge","Esgoto de Prontera","Fábrica de Brinquedos","Fábrica de Robôs",
+			"Floresta Encantada","Formigueiro Infernal","Geffenia","Glast Heim","Ilha da Tartaruga","Juperos",
+			"Labirinto da Floresta","Labirinto de Tatames","Santuário Ancestral","BioLaboratório","Lago do Abismo",
+			"Mina Abandonada de Mjolnir","Monastério","Navio Fantasma","Pirâmides","Santuário de Rachel","Templo de Odin","Torre de Bifrost",
+			"Torre de Thanatos","Torre do Relógio","Túnel Submarino","Túnel Kamidal (Scaraba)","Vulcão de Thor")){
+
+				case 1:
+					switch(select("Grande Ferida 1","Grande Ferida 2")){
+						case 1: warp "nyd_dun01",61,239; end;
+						case 2: warp "nyd_dun02",156,271; end;
+					}
+				case 2: 
+					warp "mal_dun01",33,230; end;
+				case 3: 
+					switch(select("Calabouço da Mina 1","Calabouço da Mina 2")){
+						case 1: warp "ein_dun01",22,14; end;
+						case 2: warp "ein_dun02",292,290; end;
+					}
+				case 4: 
+					switch(select("Calabouço de Geffen 1","Calabouço de Geffen 2","Calabouço de Geffen 3","Calabouço de Geffen 4")){
+						case 1: warp "gef_dun00",104,99; end;
+						case 2: warp "gef_dun01",115,236; end;
+						case 3: warp "gef_dun02",106,132; end;
+						case 4: warp "gef_dun03",203,200; end;
+					}
+				case 5: 
+					switch(select("A Tumba Real","Interior da Tumba Real","Suei Long Gon")){
+						case 1: warp "lou_dun01",218,196; end;
+						case 2: warp "lou_dun02",282,20; end;
+						case 3: warp "lou_dun03",165,38; end;
+					}
+				case 6: 
+					switch(select("Calabouços de Comodo 1","Calabouços de Comodo 2","Calabouços de Comodo 3")){
+						case 1: warp "beach_dun",266,267; end;
+						case 2: warp "beach_dun2",255,244; end;
+						case 3: warp "beach_dun3",23,260; end;
+					}
+				case 7: 
+					switch(select("Calabouços de Dewata 1","Calabouços de Dewata 2")){
+						case 1: warp "dew_dun01",285,160; end;
+						case 2: warp "dew_dun02",299,29; end;
+					}
+				case 8: 
+					switch(select("Calabouços de Kunlun 1","Calabouços de Kunlun 2","Calabouços de Kunlun 3")){
+						case 1: warp "gon_dun01",153,53; end;
+						case 2: warp "gon_dun02",28,113; end;
+						case 3: warp "gon_dun03",68,16; end;
+					}
+				case 9: 
+					switch(select("Loja de Carpintaria","Estrada para o Outro Mundo","Hvergermil's Fountain")){
+						case 1: mes "Vou descobrir ainda"; 
+						end;
+						case 2: mes "Vou descobrir ainda"; 
+						end;
+						case 3: mes "Vou descobrir ainda"; 
+						end;
+					}
+				case 10: 
+					switch(select("Caverna das Cataratas 1","Caverna das Cataratas 2")){
+						case 1: warp "bra_dun01",87,47; end;
+						case 2: warp "bra_dun02",262,262; end;
+					}
+				case 11: 
+					switch(select("Caverna de Gelo 1","Caverna de Gelo 2","Caverna de Gelo 3","Caverna de Gelo 4")){
+						case 1: warp "ice_dun01",157,14; end;
+						case 2: warp "ice_dun02",151,155; end;
+						case 3: warp "ice_dun03",149,22; end;
+						case 4: warp "ice_dun04",33,158; end;
+					}
+				case 12: 
+					switch(select("Calabouço de Magma 1","Calabouço de Magma 2")){
+						case 1: warp "mag_dun01",126,68; end;
+						case 2: warp "mag_dun02",47,30; end;
+					}
+				case 13: 
+					switch(select("Caverna de Payon 1","Caverna de Payon 2","Caverna de Payon 3","Caverna de Payon 4","Caverna de Payon 5")){
+						case 1: warp "pay_dun00",21,183; end;
+						case 2: warp "pay_dun01",19,33; end;
+						case 3: warp "pay_dun02",19,63; end;
+						case 4: warp "pay_dun03",155,159; end;
+						case 5: warp "pay_dun04",201,204; end;
+					}
+				case 14: 
+					switch(select("Caverna dos Orcs 1","Caverna dos Orcs 2")){
+						case 1: warp "orcsdun01",32,170; end;
+						case 2: warp "orcsdun02",21,185; end;
+					}
+				case 15: 
+					switch(select("Dragon's Nest 1","Dragon's Nest 2")){
+						case 1: warp "lasa_dun01",24,143; end;
+						case 2: warp "lasa_dun02",22,171; end;
+						case 3: warp "lasa_dun03",190,18; end;
+					}
+				case 16: 
+					switch(select("Esfinge 1","Esfinge 2","Esfinge 3","Esfinge 4")){
+						case 1: warp "in_sphinx1",288,9; end;
+						case 2: warp "in_sphinx2",149,81; end;
+						case 3: warp "in_sphinx3",210,54; end;
+						case 4: warp "in_sphinx4",10,222; end;
+					}
+				case 17: 
+					switch(select("Esgoto de Prontera 1","Esgoto de Prontera 2","Esgoto de Prontera 3")){
+						case 1: warp "prt_sewb1",131,248; end;
+						case 2: warp "prt_sewb2",19,19; end;
+						case 3: warp "prt_sewb3",180,169; end;
+					}
+				case 18: 
+					switch(select("Fábrica de Brinquedos 1","Fábrica de Brinquedos 2")){
+						case 1: warp "xmas_dun01",205,15; end;
+						case 2: warp "xmas_dun02",129,133; end;
+					}
+				case 19: 
+					switch(select("Fábrica de Robôs 1","Fábrica de Robôs 2")){
+						case 1: warp "kh_dun01",28,226; end;
+						case 2: warp "kh_dun02",41,198; end;
+					}
+				case 20: 
+					switch(select("Floresta Encantada 1","Floresta Encantada 2","Floresta Encantada 3")){
+						case 1: warp "mosk_dun01",189,48; end;
+						case 2: warp "mosk_dun02",165,30; end;
+						case 3: warp "mosk_dun03",32,135; end;
+					}
+				case 21: 
+					switch(select("Formigueiro Infernal 1","Formigueiro Infernal 2")){
+						case 1: warp "anthell01",35,262; end;
+						case 2: warp "anthell02",168,170; end;
+					}
+				case 22: 
+					switch(select("Geffenia 1","Geffenia 2","Geffenia 3","Geffenia 4")){
+						case 1: warp "gefenia01",40,103; end;
+						case 2: warp "gefenia02",203,34; end;
+						case 3: warp "gefenia03",266,168; end;
+						case 4: warp "gefenia04",130,272; end;
+					}
+				case 23: 
+					switch(select("Entrada","Glast Heim 1","Glast Heim 2","Cavalaria de Glast Heim 1","Cavalaria de Glast Heim 2",
+					"Esgoto de Glast Heim 1","Esgoto de Glast Heim 2","Esgoto de Glast Heim 3","Esgoto de Glast Heim 4",
+					"Abadia de Glast Heim","Escadarias de Glast Heim","A Mais Profunda Caverna de Glast Heim 1",
+					"A Mais Profunda Caverna de Glast Heim 2","Prisão Subterrânea de Glast Heim 1","Prisão Subterrânea de Glast Heim 2")){
+						case 1: warp "glast_01",370,304; end;
+						case 2: warp "gl_cas01",199,29; end;
+						case 3: warp "gl_cas02",104,25; end;
+						case 4: warp "gl_knt01",150,15; end;
+						case 5: warp "gl_knt02",157,287; end;
+						case 6: warp "gl_sew01",258,255; end;
+						case 7: warp "gl_sew02",109,290; end;
+						case 8: warp "gl_sew03",171,283; end;
+						case 9: warp "gl_sew04",68,277; end;
+						case 10: warp "gl_church",156,7; end;
+						case 11: warp "lg_step",12,7; end;
+						case 12: warp " gl_dun01",133,273; end;
+						case 13: warp "gl_dun02",224,274; end;
+						case 14: warp "gl_prison",14,70; end;
+						case 15: warp "gl_prison1",150,14; end;
+					}
+				case 24: 
+					switch(select("Entrada","Ilha da Tartaruga 1","Ilha da Tartaruga 2","Ilha da Tartaruga 3")){
+						case 1: warp "tur_dun01",154,49; end;
+						case 2: warp "tur_dun02",148,261; end;
+						case 3: warp "tur_dun03",132,189; end;
+						case 4: warp "tur_dun04",100,192; end;
+					}
+				case 25: 
+					switch(select("Entrada","Juperos 1","Juperos 2")){
+						case 1: warp "jupe_cave",145,52; end;
+						case 2: warp "juperos_01",53,247; end;
+						case 3: warp "juperos_02",39,60; end;
+					}
+				case 26: 
+					switch(select("Labirinto da Floresta 1","Labirinto da Floresta 2","Labirinto da Floresta 3")){
+						case 1: warp "prt_maze01",176,8; end;
+						case 2: warp "prt_maze02",93,20; end;
+						case 3: warp "prt_maze03",23,8; end;
+					}
+				case 27: 
+					switch(select("Labirinto de Tatames 1","Labirinto de Tatames 2","Labirinto de Tatames 3")){
+						case 1: warp "ama_dun01",231,11; end;
+						case 2: warp "ama_dun02",33,45; end;
+						case 3: warp "ama_dun03",120,12; end;
+					}
+				case 28: 
+					switch(select("Labirinto do Santuário Ancestral","Interior do Santuário Ancestral")){
+						case 1: warp "ayo_dun01",275,19; end;
+						case 2: warp "ayo_dun02",24,26; end;
+					}
+				case 29: 
+					switch(select("Laboratório 1","Laboratório 2","Laboratório 3","Laboratório 4","Laboratório 5")){
+						case 1: warp "lhz_dun01",149,288; end;
+						case 2: warp "lhz_dun02",150,18; end;
+						case 3: warp "lhz_dun03",140,134; end;
+						case 4: warp "lhz_dun04",244,57; end;
+						case 5: warp "lhz_dun_n",139,137; end;
+					}
+				case 30: 
+					switch(select("Lago do Abismo 1","Lago do Abismo 2","Lago do Abismo 3")){
+						case 1: warp "abyss_01",263,274; end;
+						case 2: warp "abyss_02",274,270; end;
+						case 3: warp "abyss_03",115,28; end;
+					}
+				case 31: 
+					switch(select("Calabouço da Mina 1","Calabouço da Mina 2","Calabouço da Mina 3")){
+						case 1: warp "mjo_dun01",52,17; end;
+						case 2: warp "mjo_dun02",381,343; end;
+						case 3: warp "mjo_dun03",302,262; end;
+					}
+				case 32: 
+					switch(select("Monastério 1","Monastério 2","Monastério 3")){
+						case 1: warp "abbey01",51,12; end;
+						case 2: warp "abbey02",149,11; end;
+						case 3: warp "abbey03",119,8; end;
+					}
+				case 33: 
+					switch(select("Navio Fantasma 1","Navio Fantasma 2")){
+						case 1: warp "treasure01",69,24; end;
+						case 2: warp "treasure02",102,27; end;
+					}
+				case 34: 
+					switch(select("Pirâmides 1","Pirâmides 2","Pirâmides 3","Pirâmides B1","Pirâmides B1.2","Pirâmides B2")){
+						case 1: warp "moc_pryd01",192,9; end;
+						case 2: warp "moc_pryd02",10,192; end;
+						case 3: warp "moc_pryd03",100,94; end;
+						case 4: warp "moc_prydn1",192,8; end;
+						case 5: warp "moc_pryd05",94,96; end;
+						case 6: warp "moc_prydn02",102,121; end;
+					}
+				case 35: 
+					switch(select("Santuário de Rachel 1","Santuário de Rachel 2","Santuário de Rachel 3","Santuário de Rachel 4",
+					"Santuário de Rachel 5")){
+						case 1: warp "ra_san01",139,10; end;
+						case 2: warp "ra_san02",33,21; end;
+						case 3: warp "ra_san03",8,149; end;
+						case 4: warp "ra_san04",203,218; end;
+						case 5: warp "ra_san05",150,9; end;
+					}
+				case 36: 
+					switch(select("Templo de Odin 1","Templo de Odin 2","Templo de Odin 3")){
+						case 1: warp "odin_tem01",96,146; end;
+						case 2: warp "odin_tem02",25,180; end;
+						case 3: warp "odin_tem03",247,37; end;
+					}
+				case 37: 
+					switch(select("Torre de Bifrost 1","Torre de Bifrost 2","Torre de Bifrost 3","Torre de Bifrost 4")){
+						case 1: warp "ecl_tdun01",57,13; end;
+						case 2: warp "ecl_tdun02",64,89; end;
+						case 3: warp "ecl_tdun03",45,14; end;
+						case 4: warp "ecl_tdun04",26,23; end;
+					}
+				case 38: 
+					switch(select("Entrada","Torre de Thanatos 1","Torre de Thanatos 2","Torre de Thanatos 3","Torre de Thanatos 4",
+					"Torre de Thanatos 5","Torre de Thanatos 6","Torre de Thanatos 7","Torre de Thanatos 8","Torre de Thanatos 9",
+					"Torre de Thanatos 10","Torre de Thanatos 11","Torre de Thanatos 12")){
+						case 1: warp "tha_t01",149,37; end;
+						case 2: warp "tha_t02",149,129; end;
+						case 3: warp "tha_t03",217,162; end;
+						case 4: warp "tha_t04",60,141; end;
+						case 5: warp "tha_t05",61,3; end;
+						case 6: warp "tha_t06",89,221; end;
+						case 7: warp "tha_t07",35,166; end;
+						case 8: warp "tha_t08",93,148; end;
+						case 9: warp "tha_t09",29,107; end;
+						case 10: warp "tha_t10",167,138; end;
+						case 11: warp "tha_t11",19,20; end;
+						case 12: warp "tha_t12",130,52; end;
+					}
+				case 39: 
+					switch(select("Torre do Relógio 1","Torre do Relógio 2","Torre do Relógio 3","Torre do Relógio 4","Torre do Relógio A1",
+					"Torre do Relógio A2","Torre do Relógio A3","Torre do Relógio A4")){
+						case 1: warp "c_tower1",200,160; end;
+						case 2: warp "c_tower2",147,284; end;
+						case 3: warp "c_tower3",63,148; end;
+						case 4: warp "c_tower4",55,157; end;
+						case 5: warp "alde_dun01",298,25; end;
+						case 6: warp "alde_dun02",126,169; end;
+						case 7: warp "alde_dun03",277,179; end;
+						case 8: warp "alde_dun04",268,74; end;
+					}
+				case 40: 
+					switch(select("Entrada","Túnel Submarino 1","Túnel Submarino 2","Túnel Submarino 3","Túnel Submarino 4",
+					"Túnel Submarino 5","Túnel Submarino 6")){
+						case 1: warp "iz_dun00",168,169; end;
+						case 2: warp "iz_dun01",253,254; end;
+						case 3: warp "iz_dun02",236,202; end;
+						case 4: warp "iz_dun03",32,63; end;
+						case 5: warp "iz_dun04",26,27; end;
+						case 6: warp "iz_dun05",141,188; end;
+					}
+				case 41: 
+					switch(select("Túnel Kamidal (Scaraba) 1","Túnel Kamidal (Scaraba) 2","Túnel Kamidal (Scaraba) 3")){
+						case 1: warp "dic_dun01",367,44; end;
+						case 2: warp "dic_dun02",102,144; end;
+						case 3: warp "dic_dun03",101,144; end;
+					}
+				case 42: 
+					switch(select("Entrada","Vulcão de Thor 1","Vulcão de Thor 2","Vulcão de Thor 3")){
+						case 1: warp "ve_fild03",168,236; end;
+						case 2: warp "thor_v01",21,228; end;
+						case 3: warp "thor_v02",76,203; end;
+						case 4: warp "thor_v03",34,262; end;
+					}
+			}
+				
+		} else {
+			mes "[^FF8000Teleportadora VIP^000000]";
+			mes "^ff0000Você não é VIP!^000000";
+			mes "Precisa utilizar o teletransporte normal ou assinar o ^008000serviço VIP^000000.";
+			close;
+		}
+		
+	}
+}
+
+// ==================== Cidades
+alberta,33,240,4	duplicate(warpra)	Teletransportadora#02	811
+aldebaran,148,115,4	duplicate(warpra)	Teletransportadora#03	811
+amatsu,203,82,4	duplicate(warpra)	Teletransportadora#04	811
+ayothaya,203,173,6	duplicate(warpra)	Teletransportadora#05	811
+comodo,207,154,4	duplicate(warpra)	Teletransportadora#06	811
+einbroch,59,205,4	duplicate(warpra)	Teletransportadora#07	811
+einbroch,243,189,2	duplicate(warpra)	Teletransportadora#08	811
+einbech,135,246,4	duplicate(warpra)	Teletransportadora#09	811
+geffen,113,64,4	duplicate(warpra)	Teletransportadora#10	811
+gonryun,151,130,4	duplicate(warpra)	Teletransportadora#11	811
+izlude,117,157,4	duplicate(warpra)	Teletransportadora#12	811
+hugel,88,151,5	duplicate(warpra)	Teletransportador#13	811
+lighthalzen,155,86,6	duplicate(warpra)	Teletransportadora#14	811
+louyang,208,109,4	duplicate(warpra)	Teletransportadora#15	811
+morocc,158,96,4	duplicate(warpra)	Teletransportadora#16	811
+//prontera,157,193,4	duplicate(warpra)	Teletransportadora#17	811
+payon,178,105,4	duplicate(warpra)	Teletransportador#18	811
+umbala,96,159,4	duplicate(warpra)	Teletransportador#19	811
+xmas,150,136,4	duplicate(warpra)	Teletransportador#20	811
+yuno,137,162,4	duplicate(warpra)	Teletransportador#21	811
+hugel,88,151,5	duplicate(warpra)	Teletransportador#22	811
+rachel,133,117,5	duplicate(warpra)	Teletransportador#23	811
+veins,211,122,5	duplicate(warpra)	Teletransportador#24	811
+nameless_i,178,256,5	duplicate(warpra)	Teletransportador#25	811
+moscovia,228,191,4	duplicate(warpra)	Teletransportador#26	811
+
+// ==================== Outros
+ama_dun01,233,9,1	duplicate(warpra)	Teletransportador#27	811
+cmd_fild08,329,359,4	duplicate(warpra)	Teletransportador#28	811
+ayo_fild02,279,154,4	duplicate(warpra)	Teletransportador#29	811
+izlu2dun,112,86,4	duplicate(warpra)	Teletransportadora#30	811
+prt_sewb1,125,253,4	duplicate(warpra)	Teletransportadora#31	811
+mjolnir_02,85,363,4	duplicate(warpra)	Teletransportadora#32	811
+einbech,184,123,4	duplicate(warpra)	Teletransportadora#33	811
+glast_01,370,308,4	duplicate(warpra)	Teletransportadora#34	811
+yuno_fild03,37,135,4	duplicate(warpra)	Teletransportadora#35	811
+niflheim,32,161,4	duplicate(warpra)	Teletransportadora#36	811
+gef_fild10,71,339,4	duplicate(warpra)	Teletransportadora#37	811
+pay_arche,39,135,4	duplicate(warpra)	Teletransportadora#38	811
+moc_ruins,64,166,4	duplicate(warpra)	Teletransportadora#39	811
+moc_fild19,108,102,4	duplicate(warpra)	Teletransportadora#40	811
+alb2trea,73,101,4	duplicate(warpra)	Teletransportadora#41	811
+tur_dun01,148,239,4	duplicate(warpra)	Teletransportadora#42	811
+lhz_dun01,157,285,4	duplicate(warpra)	Teletransportadora#43	811
+hu_fild05,186,210,4	duplicate(warpra)	Teletransportadora#44	811
+yuno_fild07,221,179,4	duplicate(warpra)	Teletransportadora#45	811
+tha_scene01,139,194,1	duplicate(warpra)	Teletransportadora#46	811
+odin_tem01,96,149,4	duplicate(warpra)	Teletransportadora#47	811
+ra_fild01,228,326,4	duplicate(warpra)	Teletransportadora#48	811
+ve_fild03,172,238,5	duplicate(warpra)	Teletransportadora#49	811
+nameless_n,160,189,5	duplicate(warpra)	Teletransportadora#50	811
+mosk_fild02,194,252,4	duplicate(warpra)	Teletransportadora#51	811
+brasilis,195,220,4	duplicate(warpra)	Teletransportadora#52	811
+dicastes01,195,192,4	duplicate(warpra)	Teletransportadora#53	811
+mora,58,147,4	duplicate(warpra)	Teletransportadora#54	811
+dewata,205,185,4	duplicate(warpra)	Teletransportadora#55	811
+malangdo,151,117,4	duplicate(warpra)	Teletransportadora#56	811
+malaya,247,219,4	duplicate(warpra)	Teletransportadora#57	811
+eclage,114,40,4	duplicate(warpra)	Teletransportadora#58	811
+jawaii,251,139,4	duplicate(warpra)	Teletransportadora#59	811
+niflheim,205,180,4	duplicate(warpra)	Teletransportadora#60	811
+//lhz_in01,281,257,4	duplicate(warpra)	Teletransportadora#61	811
+louyang,212,45,4	duplicate(warpra)	Teletransportadora#62	811
+manuk,272,148,4	duplicate(warpra)	Teletransportadora#63	811
+splendide,205,155,4	duplicate(warpra)	Teletransportadora#64	811
+lasagna,181,180,4	duplicate(warpra)	Teletransportadora#65	811
+sec_in01,90,179,4	duplicate(warpra)	Teletransportadora#66	811
+//gmniflheim,195,194,4	duplicate(warpra)	Teletransportadora#67	871
+izlude_b,121,150,4	duplicate(warpra)	Teletransportadora#68	811
+mid_camp,171,234,4	duplicate(warpra)	Teletransportadora#69	811	
+gmniflheim,202,188,5	duplicate(warpra)	Teletransportadora#69	864	}
+//-------------------------------------------------------------------
+//Quest e Instancia
+
+prontera,166,200,5	script	Especial	618,{
+	mes "[^5566FFEspecial Nordic^000000 ^fff738B^000000^24ff1cR^000000]";
+	mes "Sou especialista em viagens perigosas!";
+	mes "Diga o seu destino e eu resolvo o resto!";
+	next;
+	switch (select("^ff00f2Quest's^000000","^ff00f2Instâncias^000000","^ff00f2Illusions^000000","^ff00f2Desafio NORDIC^000000 ^fff738B^000000^24ff1cR^000000")){
+	case 1:
+		mes "[^5566FFEspecial Nordic^000000 ^fff738B^000000^24ff1cR^000000]";
+		mes "Aqui temos algumas opções de Quest's.";
+		mes "Escolha uma quest:";
+		switch (select("^00cf00Elmo Das Valquírias^000000","^00cf00Márcio LC^000000")){
+			case 1: 
+				warp "hugel",145,103; end;
+			case 2: 
+				warp "payon",248,298; end;
+		end;
+		}
+	case 2:
+		mes "[^5566FFEspecial Nordic^000000 ^fff738B^000000^24ff1cR^000000]";
+		mes "Escolha uma Instância:";
+		switch (select("^0000ffTorre Sem Fim^000000","^0000ffTorre do Demônio^000000","^0000ffAltar do Selo^000000","^0000ffCaverna Buwaya^000000",
+		"^0000ffTorneio de Magia^000000","^0000ffSarah e Fenrir^000000","^0000ffCaverna do Polvo^000000","^0000ffCovil de Vermes^000000","^0000ffPalácio das Mágoas^000000",
+		"^0000ffNinho de Nidhogg^000000","^0000ffEclage^000000","^0000ffEsgotos de Malangdo^000000","^0000ffMemórias de Sarah^000000","^0000ffMemorial dos Orcs^000000",
+		"^0000ffFábrica do Terror^000000","^0000ffHospital de Bangungot^000000","^0000ffMaldição de Glast Heim^000000","^0000ffLago Bakonawa^000000","^0000ffLabirinto da Neblina^000000",
+		"^0000ffLaboratório de Wolfchev^000000")){
+			case 1:
+				warp "e_tower",72,112; end;
+			case 2:
+				warp "dali02",137,115; end;
+			case 3:
+				warp "monk_test",307,146; end;
+			case 4:
+				warp "ma_fild02",316,317; end;
+			case 5:
+				warp "dali",94,141; end;
+			case 6:
+				warp "dali02",92,141; end;
+			case 7:
+				warp "mal_dun01",152,230; end;
+			case 8:
+				warp "dali",85,64; end;
+			case 9:
+				warp "dali02",46,128; end;
+			case 10:
+				warp "nyd_dun02",95,193; end;
+			case 11:
+				warp "ecl_hub01",129,12; end;
+			case 12:
+				warp "mal_in01",163,17; end;
+			case 13:
+				warp "dali",133,108; end;
+			case 14:
+				warp "gef_fild10",240,198; end;
+			case 15:
+				warp "xmas",234,298; end;
+			case 16:
+				warp "ma_dun01",151,8; end;
+			case 17:
+				warp "glast_01",204,268; end;
+			case 18:
+				warp "ma_scene01",172,175; end;
+			case 19:
+				warp "bif_fild01",161,334; end;
+			case 20:
+				warp "lhz_dun04",148,269; end;
+		end;
+		}
+	case 3:
+		mes "[^5566FFEspecial Nordic^000000 ^fff738B^000000^24ff1cR^000000]";
+		mes "Escolha um Desafio:";
+		switch (select("^ff8807Illusion of Moonlight [Nv. 100+]^000000","^ff8807Illusion of Frozen [Nv. 120+]^000000","^ff8807Illusion of Vampire [Nv. 130+]^000000",
+		"^ff8807Illusion of Underwater [Nv. 140+]^000000","^ff8807Illusion of Abyss [Nv. 150+]^000000","^ff8807Illusion of Teddy Bear [Nv. 150+]^000000","^ff8807Illusion of Luanda [Nv. 160+]^000000",
+		"^ff8807Illusion of Twins [Nv. 160+]^000000","^ff8807Illusion of Labyrinth [Nv. 170+]^000000")){
+			case 1:
+				warp "pay_d03_i",140,44; end;
+			case 2:
+				warp "ice_d03_i",149,24; end;
+			case 3:
+				warp "gef_d01_i",115,217; end;
+			case 4:
+				warp "izd04",131,227; end;
+			case 5:
+				warp "tur_d03_i",132,187; end;
+			case 6:
+				warp "ein_d02_i",167,187; end;
+			case 7:
+				warp "com_d02_i",249,243; end;
+			case 8:
+				warp "ant_nor",172,185; end;
+			case 9:
+				warp "prt_mz03_i",189,139; end;
+		end;
+		}
+	case 4:
+		mes "[^5566FFEspecial Nordic^000000 ^fff738B^000000^24ff1cR^000000]";
+		mes "Escolha um Desafio:";
+		switch (select("^0000ffNordic 01^000000","^ff8807Nordic 02^000000","^ff4444Nordic 03^000000")){
+			case 1:
+				warp "injupers",56,247; end;
+			case 2:
+				warp "inthor_x",36,275; end;
+			case 3:
+				warp "intha_x",129,83; end;
+		end;
+		}	
+	}
+}
+
+//Duplicação 
+sec_in01,93,186,4	duplicate(Especial)	Especial#01	618
+gmniflheim,195,194,4	duplicate(Especial)	Especial#02	871
